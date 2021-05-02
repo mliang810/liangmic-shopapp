@@ -30,7 +30,9 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropColumns('invoice_contents', ['order_id']);
+        if (Schema::hasTable('invoice_contents')){
+            Schema::dropColumns('invoice_contents', ['order_id']);
+        }
         Schema::dropIfExists('orders');
     }
 }

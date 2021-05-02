@@ -16,23 +16,25 @@ class CreateMaintenanceTable extends Migration
     {
         Schema::create('maintenances', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->boolean('on');
             $table->timestamps();
         });
-
-        DB::table('maintenances')->insert([ 
-            'name'=>'online'
-        ]);
-
-        DB::table('maintenances')->insert([ // maint table only has two entries. online-->1, and offline --> 2
-            'name'=>'offline'
-        ]);
 
         Schema::table('shops', function (Blueprint $table){ 
             //$table->foreign('maintenance_id')->references('id')->on('maintenances'); 
             // had to rename maintenance->maintenances for this to work???
             $table->foreignId('maintenance_id')->constrained();
         });
+
+        DB::table('maintenances')->insert([
+            'on'=>false
+        ]);
+
+        DB::table('shops')->insert([
+            'shopName'=> 'Test Shop',
+            'maintenance_id'=>1,
+            'user_id' => 1,
+        ]);
     }
 
     /**
@@ -42,7 +44,7 @@ class CreateMaintenanceTable extends Migration
      */
     public function down()
     {
-        Schema::dropColumns('shops', ['maint_id']);
+        Schema::dropColumns('shops', ['maintenance_id']);
         Schema::dropIfExists('maintenances');
     }
 }

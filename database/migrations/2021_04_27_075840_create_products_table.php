@@ -15,14 +15,20 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->string('description');
             $table->double('price', 8, 2);
+            $table->binary('product_image')->nullable();
             $table->timestamps();
         });
 
         Schema::table('products', function (Blueprint $table){ //bookmarks table: FK -- User ID
             // $table->foreignId('category_id')->constrained('category');
             $table->foreignId('user_id')->constrained('users'); //who made this product?                 
+        });
+
+        Schema::table('bookmarks', function (Blueprint $table){ 
+            $table->foreignId('product_id')->constrained();
         });
     }
 

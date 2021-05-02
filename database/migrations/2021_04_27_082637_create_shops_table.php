@@ -15,6 +15,8 @@ class CreateShopsTable extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
+            $table->string('shopName');
+            $table->binary('banner_image')->nullable();
             $table->timestamps();
         });
 
@@ -30,8 +32,10 @@ class CreateShopsTable extends Migration
      * @return void
      */
     public function down()
-    {
-        Schema::dropColumns('shop_contents', ['shop_id']);
+    {   
+        if (Schema::hasTable('shop_contents')){
+            Schema::dropColumns('shop_contents', ['shop_id']);
+        }
         Schema::dropIfExists('shops');
     }
 }
