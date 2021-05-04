@@ -9,21 +9,21 @@
         @csrf
         <div class="mb-3 form-group required">
             <label class="form-label" for="name">Full Name</label>
-            <input type="text" id="name" name="name" class="form-control">
+            <input type="text" id="name" name="name" class="form-control" value="{{ old('name')}}">
             @error('name') 
                 <small class="text-danger">{{ $message }} </small>
             @enderror
         </div>
         <div class="mb-3 form-group required">
             <label class="form-label" for="email">Email</label>
-            <input type="email" id="email" name="email" class="form-control">
+            <input type="email" id="email" name="email" class="form-control" value="{{ old('email')}}">
             @error('email') 
                 <small class="text-danger">{{ $message }} </small>
             @enderror
         </div>
         <div class="mb-3 form-group required">
             <label class="form-label" for="username">Username</label>
-            <input type="username" id="username" name="username" class="form-control">
+            <input type="username" id="username" name="username" class="form-control" value="{{ old('username')}}">
             @error('username') 
                 <small class="text-danger">{{ $message }} </small>
             @enderror
