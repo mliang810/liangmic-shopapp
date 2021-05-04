@@ -116,6 +116,7 @@ class shopController extends Controller
             ->join('categories', 'products.category_id', '=', 'categories.id')
             // ->with(['category', 'product', 'shop_content'])
             ->with('shop_content') //product
+            ->where('shop_contents.shop_id','=', $shop->id)
             ->groupBy('categories.id')
             ->get([
                 'categories.name as name',
@@ -256,7 +257,7 @@ class shopController extends Controller
         $shop = Shop::where('id', '=', $id)->first();
         $this->authorize('editMyShop', [User::class, $shop]);
         
-        $shop_contents = Shop_content::where('shop_id','=', $id)->all();
+        $shop_contents = Shop_content::where('shop_id','=', $id)->get();
         foreach($shop_contents as $entry){
             $prodID = $entry->product_id;
             Tag::where('product_id','=',$prodID)->delete();

@@ -44,6 +44,7 @@
                                 </button>
                         </form>
                     </div>
+                    @if (Auth::check())
                     <div class="col-6">
                         <form action="{{ route('bookmark.addToBookmarks', $product->id) }}" method="POST"> 
                             @csrf
@@ -55,6 +56,7 @@
                                 </button>
                         </form>
                     </div>
+                    @endif
                 </div>
                 @can('editProduct', [App\Models\User::class, $product])
                     <div class="row">

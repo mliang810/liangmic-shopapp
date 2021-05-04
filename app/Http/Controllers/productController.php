@@ -51,15 +51,14 @@ class productController extends Controller
         }
 
         if(null !== $request->file('product_photo')){ //this outer statement is redundant
-            if($request->hasFile('product_photo')){
                 $path= $request->file('product_photo');
                 $img = base64_encode(file_get_contents($request->file('product_photo')));
                 $filename = time(). '.' .$path->getClientOriginalExtension();
                 Storage::put($filename, base64_decode($img));
-                Storage::move($filename, 'public/shop_banners/' . $filename);
-                $product->product_image = $filename;
-            }
+                Storage::move($filename, 'public/product_images/' . $filename);
+                $product->product_image = $filename; 
         }
+        
         $tags = $request->input('tags');
         if($product->tagStr !== $tags){ // if updated tagstr is different
             Tag::where('product_id','=',$id)->delete(); // delete old tags from tags table

@@ -12,6 +12,10 @@ class AuthController extends Controller
     }
 
     public function login(Request $request){
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required'
+        ]);
         $loginSuccessful = Auth::attempt([ //will return true or false 
             'email' => $request->input('email'),
             'password' => $request->input('password'),

@@ -24,7 +24,7 @@
         <div class="mb-3 form-group required">
             <label class="form-label" for="username">Username</label>
             <input type="username" id="username" name="username" class="form-control">
-            @error('email') 
+            @error('username') 
                 <small class="text-danger">{{ $message }} </small>
             @enderror
         </div>

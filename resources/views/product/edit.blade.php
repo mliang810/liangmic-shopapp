@@ -7,7 +7,7 @@
 
 @section('content')
     <a class="btn btn-outline-danger" href="{{route('product.delete', $product->id)}}" role="button">Delete</a>
-    <form action="{{ route('product.update', $product->id) }}" method="POST">
+    <form action="{{ route('product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group row">
             <label class="col-sm-2 form-label" for="product_photo"><strong>Upload New Product Photo</strong></label>

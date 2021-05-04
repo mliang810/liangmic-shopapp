@@ -16,7 +16,7 @@
         </div>        
         <div class="form-group">
             <label for="price" class="form-label">Price $</label>
-            <input type="number" step="0.01" name="price" id="price" placeholder="0.00" value="0.00">
+            <input type="number" step="0.01" name="price" id="price" placeholder="0.00" value="{{ old('price')}}">
             @error('price') 
                     <small class="text-danger">{{ $message }} </small>
             @enderror
