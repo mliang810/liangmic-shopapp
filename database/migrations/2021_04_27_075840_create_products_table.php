@@ -18,7 +18,8 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->double('price', 8, 2);
-            $table->binary('product_image')->nullable();
+            $table->string('product_image')->nullable();
+            $table->string('tagStr')->nullable();
             $table->timestamps();
         });
 

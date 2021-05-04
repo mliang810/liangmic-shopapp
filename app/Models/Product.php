@@ -24,4 +24,16 @@ class Product extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
+
+    public function shop_contents(){
+        return $this->hasOne(Shop_content::class);
+    }
+
+    public function product_image(){
+        return $this->product_image;
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cart extends Model
 {
-    use HasFactory;
+    use HasFactory; 
     public function cart_contents(){
         $this->hasMany(Cart_content::class);
     }

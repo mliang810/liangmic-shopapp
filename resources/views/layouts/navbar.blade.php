@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>@yield('title')</title>
-    {{-- <style>
-        .form-group.required .form-label:after {
-            content:"*";
-            color:red;
+    <style>
+        .navbar {
+            margin-bottom: 40px;
         }
-    </style> --}}
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -25,8 +24,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('home') }}">Home</a>
             </li>
+
             <li class="nav-item">
-                    <a class="nav-link" href="#">Browse Shops</a>
+                <a class="nav-link" href="{{ route('about') }}">About</a>
+            </li>
+
+            <li class="nav-item">
+                    <a class="nav-link" href="{{route('shop.index')}}">Browse Shops</a>
             </li>
 
             @can('makeShop', App\Models\User::class)
@@ -39,7 +43,7 @@
 
             <ul class="navbar-nav ml-auto">
                 @if (Auth::check())
-                    @can('editShop', App\Models\User::class)
+                    @can('owner', App\Models\User::class)
                         @php 
                             $user=Auth::user();
                         @endphp
@@ -49,15 +53,15 @@
                     @endcan
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cart</a>
+                        <a class="nav-link" href="#">Cart (Unfinished)</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Bookmarks</a>
+                        <a class="nav-link" href="{{route('bookmark.index')}}">Bookmarks</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Account</a>
+                    <a class="nav-link" href="{{route('profile.index')}}">My Account</a>
                     </li>
                     
 

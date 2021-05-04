@@ -11,16 +11,46 @@
             content:"*";
             color:red;
         }
-
-        #banner{
+        .banner-holder{
             width:100%;
-            height:25%;
             max-height:350px;
+            overflow:hidden;
+            text-align: center;
+            margin:0;
+            padding:0;
+            margin-bottom: 10px;
+        }
+        .banner{
+            width:100%;
+            /* max-height:350px; */
+            margin:0;
+            padding:0;
         }
 
         #shopName{
            text-align: center;
            margin-bottom:5%;
+        }
+
+        .product_image{
+            width:100%
+        }
+        
+        .product_image #bookmarkimg{
+            width:100%;
+        }
+
+        .product_image_holder{
+            width:100%;
+            height:width;
+            max-width:200px;
+            overflow:hidden;
+            
+        }
+        .product_image_holder_page{
+            width:100%;
+            /* max-width: 350px; */
+            overflow:hidden;
         }
     </style>
 </head>

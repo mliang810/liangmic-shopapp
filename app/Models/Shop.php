@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Shop extends Model
 {
     use HasFactory;
-
+    
     public function user(){
         return $this->belongsTo(User::class);
     }
@@ -17,7 +17,7 @@ class Shop extends Model
         return $this->id;
     }
 
-    public function shopContents(){
+    public function shop_content(){
         return $this->hasMany(Shop_content::class);
     }
 

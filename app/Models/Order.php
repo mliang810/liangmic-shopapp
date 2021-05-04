@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+
     public function invoice_lines(){
         return $this->hasMany(Invoice_content::class);
     }
