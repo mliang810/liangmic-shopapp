@@ -59,7 +59,9 @@ Route::middleware(['userPermissions'])->group(function(){
 
 //SHOP
 //CREATE SHOP
-Route::get('/shop/create', [shopController::class, 'create'])->name('shop.create');
+Route::middleware(['userPermissions'])->group(function(){
+    Route::get('/shop/create', [shopController::class, 'create'])->name('shop.create');
+});
 Route::post('/shop/create', [shopController::class, 'store'])->name('shop.store');
 
 Route::get('/shop/{id}/add', [shopController::class, 'addProducts'])->name('shop.addProducts');
