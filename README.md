@@ -2,7 +2,7 @@ https://shopapp-liang.herokuapp.com/home
 
 # Final
 <h2>Proposal for ITP 405 Final Project</h2>
-<img alt="Description" src="https://doc-0s-3o-docs.googleusercontent.com/docs/securesc/9t46332o9jf3e68rur0svikud56eq69q/s3qaobj4h9fmpchlahiu7duvoe95innn/1620108600000/18336875391918463143/18336875391918463143/1nar6Is8gWTD-vk3eKaZM4WzSMqSshp9r?e=view&authuser=0&nonce=skril92mj60hs&user=18336875391918463143&hash=ah12tipb2nb6jrbpbc7jpm3h7q7iqh66">
+<img alt="Description" src="https://drive.google.com/uc?export=view&id=1nar6Is8gWTD-vk3eKaZM4WzSMqSshp9r">
 ![image](https://drive.google.com/uc?export=view&id=1nar6Is8gWTD-vk3eKaZM4WzSMqSshp9r)
 ![image](https://doc-0s-3o-docs.googleusercontent.com/docs/securesc/9t46332o9jf3e68rur0svikud56eq69q/s3qaobj4h9fmpchlahiu7duvoe95innn/1620108600000/18336875391918463143/18336875391918463143/1nar6Is8gWTD-vk3eKaZM4WzSMqSshp9r?e=view&authuser=0&nonce=skril92mj60hs&user=18336875391918463143&hash=ah12tipb2nb6jrbpbc7jpm3h7q7iqh66)
 <h3>Purpose</h3>
