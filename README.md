@@ -2,7 +2,7 @@ https://shopapp-liang.herokuapp.com/home
 
 # Final
 <h2>Proposal for ITP 405 Final Project</h2>
-![UML DIAGRAM FOR SHOPAPP](https://drive.google.com/uc?export=view&id=1nar6Is8gWTD-vk3eKaZM4WzSMqSshp9r)
+![image](https://drive.google.com/uc?export=view&id=1nar6Is8gWTD-vk3eKaZM4WzSMqSshp9r)
 <h3>Purpose</h3>
 Making a site similar to Etsy where users can set up their own shops and add items not neccessarily native to the site (eg amazon links). Site will take uploaded photos.
 
