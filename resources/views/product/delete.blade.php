@@ -1,7 +1,7 @@
 @include('layouts.navbar')
 @extends('layouts.general')
 
-@section('title', 'delete {{$product->name}}?')
+@section('title', 'Delete product?')
 
 @section('content')
     <h1>Delete "{{$product->name}}"?</h1>

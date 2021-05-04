@@ -1,7 +1,7 @@
 @include('layouts.navbar')
 @extends('layouts.general')
 
-@section('title','Home Page')
+@section('title','About')
 
 @section('content')
     <div class="siteBanner">

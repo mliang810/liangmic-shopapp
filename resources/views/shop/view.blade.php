@@ -1,6 +1,6 @@
 @include('layouts.navbar')
 @extends('layouts.general')
-
+@section('title',$shop->shopName)
 @section('content')
     @if (session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">

@@ -1,7 +1,7 @@
 @include('layouts.navbar')
 @extends('layouts.general')
 
-@section('title','{{Auth::user()->name}} Bookmarks')
+@section('title','Bookmarks')
 @section('content')
     @if (session('success'))
         <div class="alert alert-success" role="alert">
