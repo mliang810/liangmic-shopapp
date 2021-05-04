@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>@yield('title')</title>
     <style>
+        html, body{
+            margin:0;
+            padding:0;
+            margin-bottom: 50px;
+            margin-top:5px;
+        }
         .form-group.required .form-label:after {
             content:"*";
             color:red;
@@ -51,6 +57,11 @@
             width:100%;
             /* max-width: 350px; */
             overflow:hidden;
+        }
+        .siteBanner{
+            width:100%;
+            max-height:400px;
+            overflow: hidden;
         }
     </style>
 </head>

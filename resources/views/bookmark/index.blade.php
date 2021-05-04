@@ -14,6 +14,7 @@
                 <th>Shop Owner</th> {{-- their user name goes here --}}
                 <th>Shop Name</th>
                 <th>Description</th>
+                <th>Date Added</th>
                 <th></th>
             </thead>
             <tbody>
@@ -37,6 +38,9 @@
                             @else
                                 {{ $bookmark->product->description }}
                             @endif
+                        </td>
+                        <td>
+                            {{$bookmark->created_at}}
                         </td>
                         <td>
                             <a class="btn btn-outline-danger" href="{{route('bookmark.delete', $bookmark->id)}}" role="button">Delete</a>
