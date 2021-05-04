@@ -1,7 +1,7 @@
 @include('layouts.navbar')
 @extends('layouts.general')
 
-@section('title', 'Delete'')
+@section('title', 'Delete')
 
 @section('content')
     <h1>Delete your bookmark for "{{$bookmark->product->name}}"?</h1>
