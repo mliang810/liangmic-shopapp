@@ -16,7 +16,9 @@ class bookmarkController extends Controller
         ]);
     }
     public function addBookmark($id){
-        $count = Bookmark::where('product_id', '=', $id)->count();
+        $count = Bookmark::where('product_id', '=', $id)
+        ->where('user_id', '=', Auth::id())
+        ->count();
         if($count===0){
             $bookmark = new Bookmark();
             $bookmark->product_id=$id;

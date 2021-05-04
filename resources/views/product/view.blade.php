@@ -1,7 +1,7 @@
 @include('layouts.navbar')
 @extends('layouts.general')
 
-@section('title', '{{$product->name}}?')
+@section('title', $product->name)
 
 @section('content')
     
