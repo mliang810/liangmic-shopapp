@@ -1,6 +1,6 @@
 https://shopapp-liang.herokuapp.com/home
 
-# Final
+# ShopApp
 <h2>Proposal</h2>
 <img alt="Description" src="https://drive.google.com/uc?export=view&id=1nar6Is8gWTD-vk3eKaZM4WzSMqSshp9r">
 Link to video: https://drive.google.com/file/d/1knRakusybmmGSOY00oUmmh-SxFfNB7P2/view?usp=sharing
