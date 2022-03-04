@@ -1,7 +1,7 @@
 https://shopapp-liang.herokuapp.com/home
 
 # Final
-<h2>Proposal for ITP 405 Final Project</h2>
+<h2>Proposal</h2>
 <img alt="Description" src="https://drive.google.com/uc?export=view&id=1nar6Is8gWTD-vk3eKaZM4WzSMqSshp9r">
 Link to video: https://drive.google.com/file/d/1knRakusybmmGSOY00oUmmh-SxFfNB7P2/view?usp=sharing
 <h3>Purpose</h3>
